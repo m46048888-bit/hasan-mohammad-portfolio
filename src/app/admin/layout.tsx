@@ -36,8 +36,8 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   }
 
   return (
-    <div className="min-h-screen bg-ink text-paper flex">
-      <aside className="w-60 border-r border-white/10 px-6 py-8 flex flex-col justify-between">
+    <div className="min-h-screen bg-ink text-paper flex flex-col md:flex-row">
+      <aside className="w-full md:w-60 border-b md:border-b-0 md:border-r border-white/10 px-6 py-8 flex flex-col justify-between">
         <div>
           <div className="serif text-lg mb-10">Owner Panel</div>
           <nav className="flex flex-col gap-1">

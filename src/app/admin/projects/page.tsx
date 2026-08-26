@@ -9,7 +9,7 @@ export default async function AdminProjectsPage() {
 
   return (
     <div>
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-8">
         <h1 className="serif text-3xl">Projects</h1>
         <Link href="/admin/projects/new" className="mono text-xs uppercase bg-paper text-ink rounded-full px-5 py-3">
           + New Project
