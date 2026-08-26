@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  --ink: #0e1210;
+  --paper: #f6f4ec;
+  --moss: #3c5a44;
+  --moss-bright: #5c8467;
+  --gold: #b98b4e;
+  --stone: #8b8b7f;
+  --line: rgba(246, 244, 236, 0.14);
+}
+
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+}
+
+.serif {
+  font-family: "Fraunces", serif;
+}
+.mono {
+  font-family: "IBM Plex Mono", monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: var(--paper);
+  outline: none;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+.input:focus {
+  border-color: var(--gold);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
