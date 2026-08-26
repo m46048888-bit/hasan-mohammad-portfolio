@@ -14,7 +14,7 @@ export default function SiteHeader({ siteName }: { siteName: string }) {
 
   return (
     <header
-      className={`fixed top-[34px] left-0 right-0 z-[900] flex items-center justify-between px-10 py-5 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-[900] flex items-center justify-between px-10 py-5 transition-all duration-300 ${
         scrolled ? "bg-ink/85 backdrop-blur-md border-b border-white/10 py-3.5" : ""
       }`}
     >

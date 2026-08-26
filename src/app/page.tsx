@@ -29,7 +29,7 @@ export default async function HomePage() {
       <SiteHeader siteName={site.site_name} />
 
       {/* HERO — every word below comes from site_settings, editable in /admin/settings */}
-      <section className="min-h-screen relative flex flex-col justify-end px-10 pb-16 overflow-hidden">
+      <section className="min-h-[100dvh] relative flex flex-col justify-end px-10 pb-16 overflow-hidden">
         <div className="absolute inset-0 -z-10">
           {site.hero_media_url && site.hero_media_type === "image" && (
             <Image
