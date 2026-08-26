@@ -18,7 +18,7 @@ export default function ProjectForm({ project }: { project?: Project }) {
     setUploading(true);
     const supabase = createClient();
     const fileExt = file.name.split(".").pop();
-    const fileName = ${Date.now()}-${Math.random().toString(36).slice(2)}.${fileExt};
+    const fileName = Date.now() + "-" + Math.random().toString(36).slice(2) + "." + fileExt;
 
     const { error } = await supabase.storage.from("project-images").upload(fileName, file);
 
