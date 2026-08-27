@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import SiteHeader from "@/components/SiteHeader";
@@ -63,23 +62,22 @@ export default async function ProjectPage({ params }: { params: { slug: string }
         </div>
 
         {p.cover_image_url && (
-  <div className="relative w-full mb-10 overflow-hidden rounded-sm">
-    <img src={p.cover_image_url} alt={p.title} className="w-full h-auto" />
-  </div>
-)}
+          <div className="relative w-full mb-10 overflow-hidden rounded-sm">
+            <img src={p.cover_image_url} alt={p.title} className="w-full h-auto" />
+          </div>
         )}
 
         {p.description && <p className="text-stone leading-relaxed max-w-2xl mb-14">{p.description}</p>}
 
         {images && images.length > 0 && (
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-    {(images as ProjectImage[]).map((img) => (
-      <div key={img.id} className="relative w-full overflow-hidden rounded-sm">
-        <Image src={img.image_url} alt={img.alt_text || p.title} width={800} height={1000} className="w-full h-auto object-contain" />
-      </div>
-    ))}
-  </div>
-)}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {(images as ProjectImage[]).map((img) => (
+              <div key={img.id} className="relative w-full overflow-hidden rounded-sm">
+                <img src={img.image_url} alt={img.alt_text || p.title} className="w-full h-auto" />
+              </div>
+            ))}
+          </div>
+        )}
 
         {p.credits && <p className="mono text-[11px] text-stone mt-14">{p.credits}</p>}
       </article>
