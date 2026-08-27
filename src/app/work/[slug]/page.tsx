@@ -64,7 +64,7 @@ export default async function ProjectPage({ params }: { params: { slug: string }
 
         {p.cover_image_url && (
   <div className="relative w-full mb-10 overflow-hidden rounded-sm">
-    <Image src={p.cover_image_url} alt={p.title} width={1600} height={900} className="w-full h-auto object-contain" />
+    <img src={p.cover_image_url} alt={p.title} className="w-full h-auto" />
   </div>
 )}
         )}
